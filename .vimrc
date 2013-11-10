@@ -6,14 +6,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" Global
+" General
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" "{{{
 set nocompatible	"be iMproved
 filetype off
+
+set history=256
+" "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" "{{{
 " Sound on errors
 set noerrorbells
 set novisualbell
@@ -23,9 +28,17 @@ set tm=500
 " Highlight serach results
 set hlsearch
 
+" Visual
+set foldenable	" turn on folding
+set foldmethod=marker	" fold on the marker
+set foldlevel=100	"don't autofold anything
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
+" "}}}
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" "{{{
 "Enable syntax highlighting
 syntax enable
 
@@ -34,10 +47,12 @@ set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
+" "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text, tab and indent
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" "{{{
 " Use spaces instead of tabs
 "set expandtab
 
@@ -55,10 +70,12 @@ set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 set nowrap "Wrap lines
+" "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plug-ins
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" "{{{
 filetype plugin on
 
 set rtp+=~/.vim/bundle/vundle/
@@ -109,3 +126,4 @@ let g:tagbar_left = 1
 let g:tagbar_width = 30
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
+" "}}}
