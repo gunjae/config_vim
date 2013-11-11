@@ -33,6 +33,8 @@ set foldenable	" turn on folding
 set foldmethod=marker	" fold on the marker
 set foldlevel=100	"don't autofold anything
 set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
+
+set ruler
 " "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -69,6 +71,7 @@ set tabstop=4
 
 set ai "Auto indent
 set si "Smart indent
+set cindent	"c-style indent
 set nowrap "Wrap lines
 " "}}}
 
@@ -126,4 +129,28 @@ let g:tagbar_left = 1
 let g:tagbar_width = 30
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
+
+" cscope setting
+source ~/.vim/cscope_maps.vim
+"if has('cscope')
+"	set cscopetag cscopeverbose
+"
+"	if has('quickfix')
+"		set cscopequickfix=s-,c-,d-,i-,t-,e-
+"	endif
+"
+"	cnoreabbrev csa cs add
+"	cnoreabbrev csf cs find
+"	cnoreabbrev csk cs kill
+"	cnoreabbrev csr cs reset
+"	cnoreabbrev css cs show
+"	cnoreabbrev csh cs help
+"
+"	if filereadable("./cscope.out")
+"		cs add cscope.out
+"	endif
+"endif
+
+" ctags setting
+set tags=./tags
 " "}}}
