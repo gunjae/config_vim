@@ -126,9 +126,13 @@ filetype plugin indent on     " required!
 " tagbar setting
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_left = 1
-let g:tagbar_width = 30
+let g:tagbar_width = 40
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
+
+" NERDTree stting
+nmap <F7> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " cscope setting
 source ~/.vim/cscope_maps.vim
@@ -152,5 +156,9 @@ source ~/.vim/cscope_maps.vim
 "endif
 
 " ctags setting
-set tags=./tags
+if filereadable("tags")
+	set tag=./tags
+elseif $CTAG_DB != ""
+	set tag=$CTAG_DB
+endif
 " "}}}
