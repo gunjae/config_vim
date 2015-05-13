@@ -13,6 +13,8 @@ set nocompatible	"be iMproved
 filetype off
 
 set history=256
+set exrc
+set secure
 " "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -64,6 +66,8 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
+set noexpandtab
 
 " Linebreak on 500 characters
 "set lbr
@@ -73,6 +77,8 @@ set ai "Auto indent
 set si "Smart indent
 set cindent	"c-style indent
 set nowrap "Wrap lines
+set paste
+set pastetoggle=<F2>
 " "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
