@@ -77,7 +77,7 @@ set ai "Auto indent
 set si "Smart indent
 set cindent	"c-style indent
 set nowrap "Wrap lines
-set paste
+"set paste
 set pastetoggle=<F2>
 " "}}}
 
