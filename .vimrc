@@ -111,7 +111,7 @@ Plugin 'Tagbar'
 Plugin 'DoxygenToolkit.vim'
 Plugin 'The-NERD-tree'
 " non-GitHub repos
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " Git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///Users/gmarik/path/to/plugin'
 " ...
